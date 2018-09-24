@@ -57,13 +57,12 @@ Agora 为智能设备提供低功耗解决方案，包含:
 1. 下载声网提供的低功耗音视频通话 SDK
 2. 确保满足以下开发环境要求:
 
-
     * Android Studio 2.0 或以上版本
 
     * 支持语音和视频功能的真实 Android 设备
 
 
-3. 请确保在使用 Agora 相关功能及服务前，已打开特定端口，详见 :doc:`../Agora Platform/firewall`。
+3. 请确保在使用 Agora 相关功能及服务前，已打开特定端口，详见 [防火墙说明](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/Agora%20Platform/firewall?platform=All%20Platforms) 。
 
 
 #### 步骤 2: 添加 SDK
@@ -88,13 +87,11 @@ Agora 为智能设备提供低功耗解决方案，包含:
 
   * SDK 下载链接请联系 sales@agora.io 获取
 
-
-
 ### 加入声网频道实现音视频通话
 
-1. 申请 App ID，详见 :ref:`app_id_native`。
+1. 申请 App ID，详见 [获取 App ID](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/Agora%20Platform/token?platform=All%20Platforms)。
 
-2. 创建 RtcEngine 对象，并填入 App ID，详见 :ref:`live_android_create`。
+2. 创建 RtcEngine 对象，并填入 App ID，详见 [create()](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/API%20Reference/live_video_android?platform=Android)。
 
 3. 设置频道为直播模式，详见 :ref:`live_android_setChannelProfile`。
 
