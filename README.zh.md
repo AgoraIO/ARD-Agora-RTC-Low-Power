@@ -20,8 +20,7 @@ Agora 为智能设备提供低功耗解决方案，包含:
 声网借助 Agora SDK，针对功耗进行端到端的优化，实现低功耗小尺寸智能穿戴设备上的音视频通话。
 下图为低功耗音视频解决方案的实现架构图：
 
-.. image:: low_power_architecture_ch.jpg
-    :scale: 95%
+![PK 连麦架构设计](Image/low_power_architecture_ch.jpg)
 
 
 要获取声网低功耗 SDK，请联系 sales@agora.io，电话 4006326626。
@@ -37,7 +36,7 @@ Agora 为智能设备提供低功耗解决方案，包含:
 声网建议智能可穿戴设备满足以下硬件配置：
 
 * CPU 不低于800 MHz
-*  RAM memory 不低于512 M
+* RAM memory 不低于512 M
 
 
 ## 集成方法
@@ -61,7 +60,6 @@ Agora 为智能设备提供低功耗解决方案，包含:
 
     * 支持语音和视频功能的真实 Android 设备
 
-
 3. 请确保在使用 Agora 相关功能及服务前，已打开特定端口，详见 [防火墙说明](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/Agora%20Platform/firewall?platform=All%20Platforms) 。
 
 
@@ -80,9 +78,7 @@ Agora 为智能设备提供低功耗解决方案，包含:
 
 点击 **Sync Project With Gradle Files** ，直到同步完成。
 
-
-    .. image:: android9.png
-       :scale: 60%
+![PK 连麦架构设计](Image/android9.png)
 
 
 **注意:** SDK 下载链接请联系 sales@agora.io 获取。
