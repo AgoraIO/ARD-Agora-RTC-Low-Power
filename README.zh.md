@@ -25,11 +25,7 @@ Agora 为智能设备提供低功耗解决方案，包含:
 
 要获取声网低功耗 SDK，请联系 sales@agora.io，电话 4006326626。
 
-.. note::
-
-   智能设备侧做了功耗优化后，针对硬件特性定制优化了一些功能模块，考虑到对不同型号手机的兼容性，手机上需要使用标准公版2.2.0 SDK。
-
-
+**注意: ** 智能设备侧做了功耗优化后，针对硬件特性定制优化了一些功能模块，考虑到对不同型号手机的兼容性，手机上需要使用标准公版2.2.0 SDK。
 
 ## 推荐配置
 
@@ -104,6 +100,7 @@ Agora 为智能设备提供低功耗解决方案，包含:
 9. 离开频道 (leaveChannel)，详见 [leaveChannel()](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/API%20Reference/live_video_android?platform=Android) 。
 
 10. 停止视频预览 (stopPreview)，详见 [stopPreview()](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/API%20Reference/live_video_android?platform=Android) 。
+
 
 **注意:**
 
