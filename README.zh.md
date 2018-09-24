@@ -69,10 +69,12 @@ Agora 为智能设备提供低功耗解决方案，包含:
 
 
 1. 解压下载的 SDK ， 将其中的 *libs* 文件夹下的 *agora-rtc-sdk.jar* 复制到示例项目的 *app/libs* 下， 将 *libs* 文件夹下的 *arm64-v8a* ， *x86* ， *armeabi-v7a* 文件夹复制到示例项目的 *app/src/main/jniLibs* 下。
+
 2. 确保示例项目的 *app/build.gradle* 文件 dependencies 属性中添加如下依赖关系::
 
+   ```
     compile fileTree(dir: 'libs', include: ['*.jar'])
-
+   ```
 
 #### 步骤 3: 同步项目文件
 
@@ -83,9 +85,7 @@ Agora 为智能设备提供低功耗解决方案，包含:
        :scale: 60%
 
 
-.. note::
-
-  * SDK 下载链接请联系 sales@agora.io 获取
+**注意:** SDK 下载链接请联系 sales@agora.io 获取。
 
 ### 加入声网频道实现音视频通话
 
@@ -109,7 +109,7 @@ Agora 为智能设备提供低功耗解决方案，包含:
 
 10. 停止视频预览 (stopPreview)，详见 [stopPreview()](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/API%20Reference/live_video_android?platform=Android) 。
 
-.. note::
+**注意:**
 
   * 音频格式需要按照示例代码中设置::
 
@@ -125,4 +125,6 @@ Agora 为智能设备提供低功耗解决方案，包含:
 
   * 编码分辨率帧率，可定制化修改，对手表端来说，不宜设置太大。 当前默认是::
 
+      ```
       mRtcEngine.setVideoProfile(160, 120, 10, 120);
+      ```
