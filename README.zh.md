@@ -93,31 +93,35 @@ Agora 为智能设备提供低功耗解决方案，包含:
 
 2. 创建 RtcEngine 对象，并填入 App ID，详见 [create()](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/API%20Reference/live_video_android?platform=Android)。
 
-3. 设置频道为直播模式，详见 :ref:`live_android_setChannelProfile`。
+3. 设置频道为直播模式，详见 [setChannelProfile()](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/API%20Reference/live_video_android?platform=Android) 。
 
-4. 启用视频模式，详见 :ref:`live_android_enableVideo` 。
+4. 启用视频模式，详见 [enableVideo()](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/API%20Reference/live_video_android?platform=Android) 。
 
-5. 设置本地视频视图，详见 :ref:`live_android_setupLocalVideo` 。
+5. 设置本地视频视图，详见 [setupLocalVideo()](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/API%20Reference/live_video_android?platform=Android) 。
 
-6. 设置远端视频视图，详见 :ref:`live_android_setupRemoteVideo` 。
+6. 设置远端视频视图，详见 [setupRemoteVideo()](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/API%20Reference/live_video_android?platform=Android) 。
 
-7. 设置用户角色为 BROADCASTER，详见 :ref:`live_android_setClientRole`。
+7. 设置用户角色为 **BROADCASTER** ，详见 [setClientRole](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/API%20Reference/live_video_android?platform=Android) 。
 
-8. 创建并加入频道, 详见 :ref:`live_android_joinchannel`。
+8. 创建并加入频道, 详见 [joinchannel()](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/API%20Reference/live_video_android?platform=Android) 。
 
-9. 离开频道 (leaveChannel)，详见 :ref:`live_android_leaveChannel`。
+9. 离开频道 (leaveChannel)，详见 [leaveChannel()](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/API%20Reference/live_video_android?platform=Android) 。
 
-10. 停止视频预览 (stopPreview)，详见 :ref:`live_android_stopPreview`。
+10. 停止视频预览 (stopPreview)，详见 [stopPreview()](https://docs.agora.io/cn/2.4/product/Interactive%20Broadcast/API%20Reference/live_video_android?platform=Android) 。
 
 .. note::
 
   * 音频格式需要按照示例代码中设置::
 
+      、、、
       mRtcEngine.setParameters("{\"che.audio.specify.codec\":\"G722\"}");
+      、、、
 
   * joinchannel 函数对应的频道名，可自行修改。当前默认是::
 
-      mRtcEngine.joinChannel(null, "yourchannel", "Extra Optional Data", 0);
+     、、、
+     mRtcEngine.joinChannel(null, "yourchannel", "Extra Optional Data", 0);
+     、、、
 
   * 编码分辨率帧率，可定制化修改，对手表端来说，不宜设置太大。 当前默认是::
 
