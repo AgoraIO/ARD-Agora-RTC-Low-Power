@@ -113,15 +113,15 @@ Agora 为智能设备提供低功耗解决方案，包含:
 
   * 音频格式需要按照示例代码中设置::
 
-      、、、
+      ```
       mRtcEngine.setParameters("{\"che.audio.specify.codec\":\"G722\"}");
-      、、、
+      ```
 
   * joinchannel 函数对应的频道名，可自行修改。当前默认是::
 
-     、、、
+     ```
      mRtcEngine.joinChannel(null, "yourchannel", "Extra Optional Data", 0);
-     、、、
+     ```
 
   * 编码分辨率帧率，可定制化修改，对手表端来说，不宜设置太大。 当前默认是::
 
