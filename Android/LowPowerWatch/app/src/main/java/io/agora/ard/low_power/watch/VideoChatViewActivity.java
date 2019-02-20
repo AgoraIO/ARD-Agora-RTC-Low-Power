@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.pm.PackageManager;
 import android.graphics.PorterDuff;
+import android.hardware.Camera;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -22,6 +23,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.util.List;
 
 import io.agora.rtc.Constants;
 import io.agora.rtc.IRtcEngineEventHandler;
@@ -241,7 +243,8 @@ public class VideoChatViewActivity extends AppCompatActivity {
         } else {
             mLocalTextureView = new AgoraTextureView(this);
 
-            mVideoSource = new AgoraTextureCamera(getApplicationContext(), 480, 360);
+            Camera.Size size = getCameraSupportSize(480, 360);
+            mVideoSource = new AgoraTextureCamera(getApplicationContext(), size.width, size.height);
 
             (mLocalTextureView).init(((AgoraTextureCamera) mVideoSource).getEglContext());
             (mLocalTextureView).setBufferType(TEXTURE);
@@ -251,6 +254,24 @@ public class VideoChatViewActivity extends AppCompatActivity {
             mRtcEngine.setVideoSource(mVideoSource);
             mRtcEngine.setLocalVideoRenderer(mLocalTextureView);
         }
+    }
+
+    private Camera.Size getCameraSupportSize(int width, int height) {
+        Camera camera = Camera.open();
+        Camera.Parameters parms = camera.getParameters();
+        List<Camera.Size> sizes = parms.getSupportedPreviewSizes();
+
+        Camera.Size targetSize = sizes.get(0);
+        for (int i = 1; i < sizes.size(); i++) {
+            Camera.Size tmpSize = sizes.get(i);
+            if (Math.abs(tmpSize.width - width) + Math.abs(tmpSize.height - height) < Math.abs(targetSize.width - width) + Math.abs(targetSize.height - height)) {
+                targetSize = tmpSize;
+            }
+        }
+
+        Log.d("VideoChatViewActivity", "width:" + targetSize.width + ", height:" + targetSize.height);
+
+        return targetSize;
     }
 
     // Tutorial Step 4
